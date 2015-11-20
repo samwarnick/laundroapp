@@ -1,0 +1,52 @@
+body {
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#content {
+  height: 100%;
+  position: relative;
+}
+
+#iphone {
+  height: 800px;
+}
+
+#container {
+  z-index: 1000;
+  float: left;
+  position: absolute;
+  width: 302px;
+  height: 540px;
+  left: 122px;
+  top: 136px;
+}
+
+#nav {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background-color: #5697D8;
+}
+
+#nav h1 {
+  margin: 0;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  color: #FFF;
+  padding-top: 16px;
+}
+
+#settings-icon {
+  float: right;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+#back-icon {
+  float: left;
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+}
