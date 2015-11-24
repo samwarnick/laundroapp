@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Laundroapp | Map</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="" id="content">
+      <img id="iphone" src="img/iPhone-6-wireframe.jpg" alt="" />
+      <div class="" id="container">
+        <div class="" id="nav">
+          <h1><i class="fa fa-angle-left" id="back-icon"></i>Laundroapp<i class="fa fa-cog" id="settings-icon"></i><h1>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var laundromats = [
+        {name: 'Laundry on Ninth', pos: {lat: 40.239545, lng: -111.642502}, rating: 3.8},
+        {name: 'Wash Hut', pos: {lat: 40.241904, lng: -111.650208}, rating: 2.6}
+      ];
+      var map;
+
+      function bindInfoWindow(marker, map, infowindow, html) {
+          google.maps.event.addListener(marker, 'click', function() {
+              infowindow.setContent(html);
+              infowindow.open(map, marker);
+          });
+      }
+
+      var createMarkers = function(map) {
+        for (var i = 0; i < laundromats.length; i++) {
+          var laundromat = laundromats[i];
+
+          var marker = new google.maps.Marker({
+            position: laundromat.pos,
+            map: map,
+            animation: google.maps.Animation.DROP,
+            title: laundromat.name
+          });
+
+          var content = generateContent(laundromat);
+          var infowindow = new google.maps.InfoWindow({
+            content: content,
+            // maxWidth: 200
+          });
+
+          bindInfoWindow(marker, map, infowindow, content);
+        }
+      };
+
+      var generateContent = function(laundromat) {
+        var content = '<h1 id="firstHeading" class="firstHeading">'+ laundromat.name +'</h1>'+
+                      '<div id="bodyContent"><h2>'
+        for (var i =0; i < Math.floor(laundromat.rating); i++) {
+          content += '<i class="fa fa-star"></i>';
+        }
+        var left = 5 - Math.floor(laundromat.rating);
+        if (laundromat.rating > Math.floor(laundromat.rating)) {
+          content += '<i class="fa fa-star-half-o"></i>'
+          left -= 1;
+        }
+        for (var i =0; i < left; i++) {
+          content += '<i class="fa fa-star-o"></i>';
+        }
+        content += ' ' + laundromat.rating + '<a id="reviews-link" href="#">read reviews</a></h2><button>Reserve</button></div>';
+        return content;
+      };
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.237842, lng: -111.646481},
+          zoom: 15
+        });
+
+        createMarkers(map);
+
+        var myloc = new google.maps.Marker({
+          clickable: false,
+          icon: new google.maps.MarkerImage('http://i.stack.imgur.com/orZ4x.png'),
+          shadow: null,
+          zIndex: 999,
+          map: map
+        });
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            myloc.setPosition(pos);
+            map.setCenter(pos);
+          }, function() {
+            // handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          // handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+      // Laundry on Ninth
+      // 40.239545, -111.642502
+      // Wash Hut
+      // 40.241904, -111.650208
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWBSvl0BC4_8CeYXq9z5C-jQtdB4j2WnM&callback=initMap">
+    </script>
+  </body>
+</html>

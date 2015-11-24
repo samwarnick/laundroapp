@@ -38,15 +38,47 @@ body {
 }
 
 #settings-icon {
-  float: right;
   position: absolute;
   right: 8px;
   bottom: 8px;
 }
 
 #back-icon {
-  float: left;
   position: absolute;
   left: 8px;
   bottom: 8px;
+}
+
+#map {
+  height: 480px;
+  width: 100%;
+}
+
+#reviews-link {
+  font-size: 12px;
+  color: black;
+}
+
+.fa-star, .fa-star-o, .fa-star-half-o {
+  color: #FFE435;
+}
+
+button {
+  font-size: 20px;
+  color: #FFF;
+  background-color: #5697D8;
+  border: none;
+  outline: 0;
+  padding: 4px 20px;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: #77abdf;
+}
+
+button:active {
+  background-color: #4478ac;
 }
