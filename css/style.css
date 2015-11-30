@@ -107,3 +107,21 @@ button:active {
 #reviews li h4 i {
   float: right;
 }
+
+#splash {
+  text-align: center;
+  width: 100;
+}
+
+#splash button {
+  margin-top: 10px;
+  width: 180px;
+}
+
+#splash h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 45px;
+  text-align: center;
+  color: #5697D8;
+  padding-top: 16px;
+}
