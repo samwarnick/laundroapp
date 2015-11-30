@@ -60,7 +60,7 @@ body {
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
-  color: #FFE435;
+  color: #FFAB40;
 }
 
 button {
@@ -73,12 +73,37 @@ button {
   border-radius: 3px;
   margin-left: auto;
   margin-right: auto;
-}
-
-button:hover {
-  background-color: #77abdf;
+  position: relative;
 }
 
 button:active {
   background-color: #4478ac;
+}
+
+#reviews {
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+#reviews li {
+  padding: 0 10px;
+  margin-bottom: 10px;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+}
+
+#reviews li h3 {
+  margin: 8px 0;
+}
+
+#reviews li h4 {
+  margin: 8px 0;
+  font-weight: normal;
+  text-align: left;
+}
+
+#reviews li h4 i {
+  float: right;
 }
