@@ -18,6 +18,16 @@
         <div class="" id="nav">
           <h1><i class="fa fa-angle-left" id="back-icon" onclick="goBack()"></i>Laundroapp<i class="fa fa-cog" id="settings-icon"></i><h1>
         </div>
+        <div id="reviews-container">
+          <div id="rating">
+            <h2 id="laundromat-name">Name</h2>
+            <span id="stars"></span>
+            <button onclick="location.href='write.html';">Write Review</button>
+          </div>
+          <ul id="reviews">
+
+          </ul>
+        </div>
       </div>
     </div>
     <script>
@@ -32,6 +42,51 @@
         {author: "Guy", date: "11/27/15", review: "Way dirty. Saw a rat.", rating: 2},
         {author: "Sam", date: "11/2/15", review: "Vending machines didn't even work", rating: 1}
       ]
+
+      function createReview(review) {
+        var content = "<li>";
+
+        content += "<h4>" + review.author + " on " + review.date;
+
+        for (var i =0; i < Math.floor(review.rating); i++) {
+          content += '<i class="fa fa-star"></i>';
+        }
+        var left = 5 - Math.floor(review.rating);
+        if (review.rating > Math.floor(review.rating)) {
+          content += '<i class="fa fa-star-half-o"></i>'
+          left -= 1;
+        }
+        for (var i =0; i < left; i++) {
+          content += '<i class="fa fa-star-o"></i>';
+        }
+
+        content += "</h4>";
+
+        content += "<h3>" + review.review + "</h3>";
+        content += "</li>";
+        return content;
+      }
+
+      var stars = "";
+      for (var i =0; i < Math.floor(laundromat.rating); i++) {
+        stars += '<i class="fa fa-star"></i>';
+      }
+      var left = 5 - Math.floor(laundromat.rating);
+      if (laundromat.rating > Math.floor(laundromat.rating)) {
+        stars += '<i class="fa fa-star-half-o"></i>'
+        left -= 1;
+      }
+      for (var i =0; i < left; i++) {
+        stars += '<i class="fa fa-star-o"></i>';
+      }
+      $("#stars").html(stars);
+      $("#laundromat-name").html(laundromat.name);
+
+      $("#reviews").empty();
+      for (var i = 0; i < reviews.length; i++) {
+        var content = createReview(reviews[i]);
+        $("#reviews").append(content);
+      }
     </script>
   </body>
 </html>

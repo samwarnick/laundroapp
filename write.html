@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Laundroapp</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="" id="content">
+      <img id="iphone" src="img/iPhone-6-wireframe.jpg" alt="" />
+      <div class="" id="container">
+        <div class="" id="nav">
+          <h1><i class="fa fa-angle-left" id="back-icon" onclick="goBack()"></i>Laundroapp<i class="fa fa-cog" id="settings-icon"></i><h1>
+        </div>
+        <div id="write-container">
+          <h1>Write a Review</h1>
+          <div id="star-ratings">
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <div class="text-container">
+            <textarea placeholder="Write a review..." cols="1" rows="6"></textarea>
+          </div>
+          <div class="buttons">
+            <button id="cancel-review">Cancel</button>
+            <button id="submit-review">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function goBack() {
+          window.history.back();
+      }
+    </script>
+    <script type="text/javascript">
+
+      var rating = 0;
+
+      $(".fa").click(function() {
+        var index = $(this).index();
+
+        var children = $("#star-ratings").children();
+        for (var i = 0; i < index+1; i++) {
+          $(children[i]).removeClass("fa-star-o");
+          $(children[i]).addClass("fa-star");
+        }
+        for (var i = index + 1; i < 6; i++) {
+          $(children[i]).removeClass("fa-star");
+          $(children[i]).addClass("fa-star-o");
+        }
+
+        rating = index + 1;
+      });
+    </script>
+  </body>
+</html>
