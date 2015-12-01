@@ -84,7 +84,8 @@ button:active {
   list-style: none;
   padding: 0 10px;
   margin: 0;
-  padding-top: 10px;
+  padding-top: 24px;
+  clear: both;
 }
 
 #reviews li {
@@ -92,6 +93,7 @@ button:active {
   margin-bottom: 10px;
   background: #F5F5F5;
   border: 1px solid #E0E0E0;
+  border-radius: 3px;
 }
 
 #reviews li h3 {
@@ -105,6 +107,62 @@ button:active {
 }
 
 #reviews li h4 i {
+  float: right;
+}
+
+#rating {
+  padding: 0 10px;
+}
+
+#rating h2 {
+  margin-bottom: 4px;
+}
+
+#rating #stars {
+  position: relative;
+  top: 8px;
+}
+
+#rating button {
+  float: right;
+}
+
+#star-ratings {
+  text-align: center;
+  font-size: 30px;
+}
+
+#write-container {
+  padding: 0 10px;
+}
+
+#write-container .text-container {
+  margin: 12px;
+}
+
+#write-container textarea
+{
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  resize: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  position: relative;
+  left: -5px;
+  background: #F5F5F5;
+}
+
+#write-container .buttons {
+  padding: 0 20px;
+}
+
+#write-container #cancel-review {
+  float: left;
+}
+
+#write-container #submit-review {
   float: right;
 }
 
