@@ -16,11 +16,16 @@
       <img id="iphone" src="img/iPhone-6-wireframe.jpg" alt="" />
       <div class="" id="container">
         <div class="" id="nav">
-          <h1><i class="fa fa-angle-left" id="back-icon"></i>Laundroapp<a href="settings.html"><i class="fa fa-cog" id="settings-icon"></i></a><h1>
+          <h1><i class="fa fa-angle-left" id="back-icon" onclick="goBack()"></i>Laundroapp<a href="settings.html"><i class="fa fa-cog" id="settings-icon"></i></a><h1>
         </div>
         <div id="map"></div>
       </div>
     </div>
+    <script>
+      function goBack() {
+          window.history.back();
+      }
+    </script>
     <script type="text/javascript">
       var laundromats = [
         {id: 1, name: 'Laundry on Ninth', pos: {lat: 40.239545, lng: -111.642502}, rating: 3.7},
