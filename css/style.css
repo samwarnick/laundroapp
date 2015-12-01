@@ -64,12 +64,14 @@ body {
 }
 
 button {
-  font-size: 20px;
+  margin-top: 10px;
+  width: 200px;
+  font-size: 16px;
   color: #FFF;
   background-color: #5697D8;
   border: none;
   outline: 0;
-  padding: 4px 20px;
+  padding: 10px 20px;
   border-radius: 3px;
   margin-left: auto;
   margin-right: auto;
@@ -158,6 +160,11 @@ button:active {
   padding: 0 20px;
 }
 
+.buttons button {
+  width: auto;
+  padding: 10px 30px;
+}
+
 #write-container #cancel-review {
   float: left;
 }
@@ -169,11 +176,6 @@ button:active {
 #splash {
   text-align: center;
   width: 100;
-}
-
-#splash button {
-  margin-top: 10px;
-  width: 180px;
 }
 
 #splash h1 {
@@ -201,7 +203,7 @@ button:active {
   font-size: 15px;
 }
 
-#historyammount {
+#alignright {
   float: right;
 }
 
@@ -280,4 +282,28 @@ a {
 
 #reserve {
   float: right;
+}
+
+.account-form {
+  text-align: center;
+  padding: 10px;
+}
+
+.account-form input {
+  width: 90%;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.points {
+  color: #FFAC30;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.points-remaining {
+
 }
