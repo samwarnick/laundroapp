@@ -64,14 +64,12 @@ body {
 }
 
 button {
-  margin-top: 10px;
-  width: 200px;
-  font-size: 16px;
+  font-size: 20px;
   color: #FFF;
   background-color: #5697D8;
   border: none;
   outline: 0;
-  padding: 10px 20px;
+  padding: 4px 20px;
   border-radius: 3px;
   margin-left: auto;
   margin-right: auto;
@@ -86,8 +84,7 @@ button:active {
   list-style: none;
   padding: 0 10px;
   margin: 0;
-  padding-top: 24px;
-  clear: both;
+  padding-top: 10px;
 }
 
 #reviews li {
@@ -95,7 +92,6 @@ button:active {
   margin-bottom: 10px;
   background: #F5F5F5;
   border: 1px solid #E0E0E0;
-  border-radius: 3px;
 }
 
 #reviews li h3 {
@@ -112,70 +108,14 @@ button:active {
   float: right;
 }
 
-#rating {
-  padding: 0 10px;
-}
-
-#rating h2 {
-  margin-bottom: 4px;
-}
-
-#rating #stars {
-  position: relative;
-  top: 8px;
-}
-
-#rating button {
-  float: right;
-}
-
-#star-ratings {
-  text-align: center;
-  font-size: 30px;
-}
-
-#write-container {
-  padding: 0 10px;
-}
-
-#write-container .text-container {
-  margin: 12px;
-}
-
-#write-container textarea
-{
-  width: 100%;
-  margin: 0;
-  padding: 5px;
-  resize: none;
-  outline: none;
-  border-radius: 4px;
-  font-size: 16px;
-  position: relative;
-  left: -5px;
-  background: #F5F5F5;
-}
-
-.buttons {
-  padding: 0 20px;
-}
-
-.buttons button {
-  width: auto;
-  padding: 10px 30px;
-}
-
-#write-container #cancel-review {
-  float: left;
-}
-
-#write-container #submit-review {
-  float: right;
-}
-
 #splash {
   text-align: center;
   width: 100;
+}
+
+#splash button {
+  margin-top: 10px;
+  width: 180px;
 }
 
 #splash h1 {
@@ -203,7 +143,7 @@ button:active {
   font-size: 15px;
 }
 
-#alignright {
+#historyammount {
   float: right;
 }
 
@@ -211,99 +151,58 @@ button:active {
   text-align: right;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+ #dryer_settings_container{
+  margin:0px;
+  padding:0px;
+  height: 285px;
+  width: 100%;
 }
 
-#machine-map #legend {
-  margin-bottom: 20px;
+#washer_settings_container{
+  margin:0px;
+  padding:0px;
+  height: 185px;
+  width: 100%;
 }
 
-#machine-map #legend .machine {
-  display: inline-block;
-}
 
-#machine-map #legend h3 {
-  text-align: left;
-  display: inline-block;
-}
-
-#machine-map h2 {
+#dryer_washer_title {
   text-align: center;
+  color: #ffad33;
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-size: 25px;
+  margin:0px;
+  padding:0px;
+  padding-top: 10px;
 }
 
-#machine-map h3 {
-  text-align: center;
-}
-
-#machine-map span {
-  margin-right: 12px;
-}
-
-.row {
-  clear: both;
-  display: inline-block;
-  margin-left: 30px;
-  margin-bottom: 2px;
-}
-
-.machine {
-  width: 25px;
-  height: 25px;
-  float: left;
-  border: 1px solid black;
-  margin-right: 3px;
-}
-
-.washer {
-  border-radius: 12.5px;
-}
-
-.space {
-  border: 1px solid white;
-}
-
-.available {
-  background-color: #1F6AC1;
-}
-
-.unavailable {
-  background-color: #9FA3A2;
-}
-
-.selected {
-  background-color: #69DB69;
-}
-
-#cancel-reserve{
-  float: left;
-}
-
-#reserve {
-  float: right;
-}
-
-.account-form {
-  text-align: center;
-  padding: 10px;
-}
-
-.account-form input {
-  width: 90%;
-  font-size: 20px;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.points {
-  color: #FFAC30;
-  font-weight: bold;
-  font-size: 40px;
+.progress_0 {
+  position: relative;
+  left: 92px;
+  top: 17px;
   margin: 0px;
   padding: 0px;
 }
 
-.points-remaining {
+.progress_1 {
+  position: relative;
+  left: 25px;
+  top: 17px;
+  margin: 0px;
+  padding: 0px;
+}
 
+.progress_2 {
+  position: relative;
+  left: 45px;
+  top: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
 }
