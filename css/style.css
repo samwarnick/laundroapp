@@ -165,3 +165,51 @@ button:active {
 #write-container #submit-review {
   float: right;
 }
+
+#splash {
+  text-align: center;
+  width: 100;
+}
+
+#splash button {
+  margin-top: 10px;
+  width: 180px;
+}
+
+#splash h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 45px;
+  text-align: center;
+  color: #5697D8;
+  padding-top: 16px;
+}
+
+#option {
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#expiration {
+  text-align: right;
+  font-size: 15px;
+}
+
+#historydate {
+  text-align: left;
+  font-size: 15px;
+}
+
+#historyammount {
+  float: right;
+}
+
+#historyplace {
+  text-align: right;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
