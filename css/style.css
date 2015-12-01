@@ -154,7 +154,7 @@ button:active {
   background: #F5F5F5;
 }
 
-#write-container .buttons {
+.buttons {
   padding: 0 20px;
 }
 
@@ -212,4 +212,72 @@ button:active {
 a {
     color: white;
     text-decoration: none;
+}
+
+#machine-map #legend {
+  margin-bottom: 20px;
+}
+
+#machine-map #legend .machine {
+  display: inline-block;
+}
+
+#machine-map #legend h3 {
+  text-align: left;
+  display: inline-block;
+}
+
+#machine-map h2 {
+  text-align: center;
+}
+
+#machine-map h3 {
+  text-align: center;
+}
+
+#machine-map span {
+  margin-right: 12px;
+}
+
+.row {
+  clear: both;
+  display: inline-block;
+  margin-left: 30px;
+  margin-bottom: 2px;
+}
+
+.machine {
+  width: 25px;
+  height: 25px;
+  float: left;
+  border: 1px solid black;
+  margin-right: 3px;
+}
+
+.washer {
+  border-radius: 12.5px;
+}
+
+.space {
+  border: 1px solid white;
+}
+
+.available {
+  background-color: #1F6AC1;
+}
+
+.unavailable {
+  background-color: #9FA3A2;
+}
+
+.selected {
+  background-color: #69DB69;
+}
+
+#cancel-reserve{
+  float: left;
+}
+
+#reserve {
+  float: right;
 }

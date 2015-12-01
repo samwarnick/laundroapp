@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Laundroapp</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="" id="content">
+      <img id="iphone" src="img/iPhone-6-wireframe.jpg" alt="" />
+      <div class="" id="container">
+        <div id="navbar"></div>
+        <div id="machine-map">
+          <h2>Available Now</h2>
+          <div id="legend">
+            <div class="machine washer"></div>
+            <h3>Washer</h3>
+            <div class="machine dryer"></div>
+            <h3>Dryer</h3>
+          </div>
+          <div class="row">
+            <div class="machine dryer available"></div>
+            <div class="machine dryer available"></div>
+            <div class="machine dryer unavailable"></div>
+            <div class="machine dryer unavailable"></div>
+            <div class="machine dryer unavailable"></div>
+            <div class="machine dryer unavailable"></div>
+            <div class="machine space"></div>
+            <div class="machine dryer available"></div>
+          </div>
+          <div class="row">
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine dryer available"></div>
+          </div>
+          <div class="row">
+            <div class="machine dryer available"></div>
+            <div class="machine dryer available"></div>
+            <div class="machine dryer available"></div>
+            <div class="machine dryer available"></div>
+            <div class="machine dryer available"></div>
+            <div class="machine dryer available"></div>
+            <div class="machine space"></div>
+            <div class="machine dryer available"></div>
+          </div>
+          <div class="row">
+            <div class="machine washer available"></div>
+            <div class="machine washer available"></div>
+            <div class="machine washer unavailable"></div>
+            <div class="machine washer available"></div>
+            <div class="machine washer unavailable"></div>
+            <div class="machine washer unavailable"></div>
+            <div class="machine space"></div>
+            <div class="machine washer available"></div>
+          </div>
+          <div class="row">
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine space"></div>
+            <div class="machine washer available"></div>
+          </div>
+          <div class="row">
+            <div class="machine washer available"></div>
+            <div class="machine washer unavailable"></div>
+            <div class="machine washer unavailable"></div>
+            <div class="machine washer available"></div>
+            <div class="machine washer unavailable"></div>
+            <div class="machine washer available"></div>
+            <div class="machine space"></div>
+            <div class="machine washer available"></div>
+          </div>
+          <h3>Washers: <span id="wash-selected">0</span> Dryers: <span id="dry-selected">0</span></h3>
+          <h3>$<span id="cost-selected">0.00</span></h3>
+          <div class="buttons">
+            <button id="cancel-reserve" onclick="goBack()">Cancel</button>
+            <button id="reserve" onclick="reserve()">Reserve</button>
+          </div>
+        </div>
+    </div>
+    <script>
+      function goBack() {
+          window.history.back();
+      }
+    </script>
+    <script type="text/javascript">
+      var washer = 0;
+      var dryer = 0;
+      var cost = 0.00;
+
+      function incrementWasher() {
+        washer += 1;
+        cost += 2.5;
+      }
+      function decrementWasher() {
+        if (washer > 0) {
+          washer -= 1;
+        }
+        if (cost > 0) {
+          cost -= 2.5;
+        }
+      }
+
+      function incrementDryer() {
+        dryer += 1;
+        cost += 1.5;
+      }
+      function decrementDryer() {
+        if (dryer > 0) {
+          dryer -= 1;
+        }
+        if (cost > 0) {
+          cost -= 1.5;
+        }
+      }
+
+      function update() {
+        $("#wash-selected").html(washer);
+        $("#dry-selected").html(dryer);
+        $("#cost-selected").html(cost.toFixed(2));
+      }
+
+      $(".machine").click(function() {
+        if ($(this).hasClass("available")) {
+          if ($(this).hasClass("washer")) {
+            incrementWasher();
+          } else if ($(this).hasClass("dryer")) {
+            incrementDryer();
+          }
+          $(this).removeClass("available");
+          $(this).addClass("selected");
+        }
+        else if ($(this).hasClass("selected")) {
+          if ($(this).hasClass("washer")) {
+            decrementWasher();
+          } else if ($(this).hasClass("dryer")) {
+            decrementDryer();
+          }
+          $(this).removeClass("selected");
+          $(this).addClass("available");
+        }
+        update();
+      });
+    </script>
+  </body>
+</html>
