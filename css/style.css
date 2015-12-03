@@ -50,13 +50,39 @@ body {
 }
 
 #map {
-  height: 480px;
+  height: 320px;
   width: 100%;
 }
 
 #reviews-link {
   font-size: 12px;
   color: black;
+}
+
+#nearby-laundromats-heading{
+	font-size: 30px;
+	font-style: bold;
+	text-align: center;
+	padding: 10px;
+	border-style: none none solid none;
+	border-bottom-width: 1px;
+	border-color: #5697D8; 
+}
+
+#nearby-laundromats{
+	font-size: 20px;
+	padding: 10px;
+	border-style: none none solid none;
+	border-bottom-width: 1px;
+	border-color: #5697D8; 
+}
+
+#laundryname{
+	text-align: left;
+}
+
+#distance{
+	float: right;
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
@@ -191,6 +217,7 @@ button:active {
   padding: 10px;
   margin: 10px;
   font-size: 20px;
+	border-color: blue;
 }
 
 #expiration {
