@@ -11,12 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
    
     <script type="text/javascript">
-      $('#time_left_html').click(function(){
+      $("#time_left_html").click(function(){
         console.log("HERE");
         $('#time_left_html').html("15 Min");
       });
     </script>
-    
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
@@ -42,7 +41,7 @@
         <div id = "dryer_settings_container">
            <h2 id = "dryer_washer_title"> Dryer </h2>
 
-           <div id = "time_left" class="progress_1 c100 p60 small orange">
+           <div class="time_left progress_1 c100 p60 small orange">
             <span id = "time_left_html">10 Min</span>
             <div class="slice">
               <div class="bar"></div>
@@ -52,17 +51,15 @@
 
 
            <div class="progress_2 c100 p80 small orange">
-            <span>80% Dry</span>
+            <span style = "color:#ffad33;">80% Dry</span>
             <div class="slice">
               <div class="bar"></div>
               <div class="fill"></div>
             </div>
           </div>
+          <button class = "dryer_setting_button">+5 Min</button>
+          <button class = "dryer_setting_button">Cancel Heat</button>
 
-
-        <div>
-        <hr>
-      </div>
     </div>
   </body>
 </html>

@@ -314,6 +314,12 @@ a {
   height: 185px;
   width: 100%;
 }
+#dryer_settings_container{
+  margin:0px;
+  padding:0px;
+  height: 295px;
+  width: 100%;
+}
 
 
 #dryer_washer_title {
@@ -349,4 +355,54 @@ a {
   top: 17px;
   margin: 0px;
   padding: 0px;
+
 }
+
+.dryer_settings{
+  position: relative;
+  left: 117px;
+  top: 40px;
+  color: #5697D8;;
+}
+
+.dryer_setting_button{
+  width: 120px;
+  margin-top: 30px;
+  margin-left: 19px;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
