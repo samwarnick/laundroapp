@@ -10,9 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="js/script.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   </head>
   <body>
     <div class="" id="content">
@@ -91,7 +89,13 @@
           <h3>$<span id="cost-selected">0.00</span></h3>
           <div class="buttons">
             <button id="cancel-reserve" onclick="goBack()">Cancel</button>
-            <button id="reserve" onclick="location.href='landing.html';">Reserve</button>
+            <button id="reserve" onclick="reserve()">Reserve</button>
+          </div>
+          <div id="res-overlay"></div>
+          <div id="res-conf">
+            <h2>Your machines are reserved!</h2>
+            <h3>See you in the next 20 mins</h3>
+            <button id="confirm" onclick="location.href='landing.html';">Ok</button>
           </div>
         </div>
     </div>
@@ -101,6 +105,12 @@
       }
     </script>
     <script type="text/javascript">
+
+      $(document).ready(function() {
+        $("#res-overlay").hide();
+        $("#res-conf").hide();
+      });
+
       var washer = 0;
       var dryer = 0;
       var cost = 0.00;
@@ -129,6 +139,12 @@
         if (cost > 0) {
           cost -= 1.5;
         }
+      }
+
+      function reserve() {
+        console.log("yay!");
+        $("#res-overlay").fadeIn(100);
+        $("#res-conf").fadeIn(200);
       }
 
       function update() {
