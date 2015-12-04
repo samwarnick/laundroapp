@@ -430,7 +430,8 @@ a {
 }
 
 .points-remaining {
-
+  padding-top: 20px;
+  clear: both;
 }
 
 #washer_settings_container{
@@ -472,6 +473,14 @@ a {
   position: relative;
   left: 45px;
   top: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.progress_3 {
+  position: relative;
+  left: 84px;
+  top: 10px;
   margin: 0px;
   padding: 0px;
 }
@@ -531,4 +540,20 @@ a {
 #bodyContent h3 {
   font-weight: 300;
   margin: 0;
+}
+
+#points-title {
+  color: rgba(255,171,64,1);
+  margin: 0;
+  font-size: 30px;
+}
+
+#points-container {
+  margin:0px;
+  padding:0px;
+  width: 100%;
+}
+
+#cur-points {
+  color: rgba(255,171,64,1);
 }
