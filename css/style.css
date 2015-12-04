@@ -50,8 +50,11 @@ body {
 }
 
 #map {
-  height: 320px;
+  height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -999;
 }
 
 #reviews-link {
@@ -60,21 +63,24 @@ body {
 }
 
 #nearby-laundromats-heading{
-	font-size: 30px;
+	font-size: 20px;
 	font-style: bold;
 	text-align: center;
 	padding: 10px;
 	border-style: none none solid none;
-	border-bottom-width: 1px;
+	border-bottom-width: 2px;
 	border-color: #5697D8;
+  background-color: rgba(241,241,241,.95);
 }
 
 #nearby-laundromats{
 	font-size: 20px;
 	padding: 10px;
 	border-style: none none solid none;
-	border-bottom-width: 1px;
+	border-bottom-width: 2px;
 	border-color: #5697D8;
+  background-color: rgba(241,241,241,.95);
+  font-weight: 300;
 }
 
 #laundryname{
@@ -83,6 +89,10 @@ body {
 
 #distance{
 	float: right;
+}
+
+#distance i {
+  color: rgba(255,171,64,.95);
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
@@ -256,16 +266,19 @@ a {
 }
 
 #machine-map #legend h3 {
+  font-weight: 300;
   text-align: left;
   display: inline-block;
 }
 
 #machine-map h2 {
+  font-weight: 300;
   text-align: center;
   color: #1F6AC1;
 }
 
 #machine-map h3 {
+  font-weight: 300;
   text-align: center;
 }
 
@@ -411,11 +424,13 @@ a {
 
 #res-conf h2 {
   margin: 0;
+  font-weight: 400;
 }
 
 #res-conf h3 {
   margin: 0;
   color: #555;
+  font-weight: 300;
 }
 
 #res-conf #confirm {
