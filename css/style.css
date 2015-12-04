@@ -22,6 +22,53 @@ body {
   top: 136px;
 }
 
+#tutorial-container {
+  z-index: 1000;
+  float: left;
+  position: absolute;
+  width: 302px;
+  height: 540px;
+  left: 122px;
+  top: 136px;
+  background-color: #5396DA;
+  text-align: center;
+}
+
+#tutorial-footer {
+  position: absolute;
+  width: 272px;
+  left: 0px;
+  top: 490px;
+  border-top: 1px solid #fff;
+  padding: 15px;
+  color: #fff;
+  text-align: left;
+}
+
+#tutorial button {
+  background-color: #fff;
+  color: #5095DD;
+}
+
+#info {
+  width: 80%;
+  position: relative;
+  margin: 0px auto;
+  color: #fff;
+  font-size: 20px;
+}
+
+#dots {
+  float: right;
+  padding-top: 5px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.tutorial-img {
+  box-shadow: 0px 0px 20px #285786;
+}
+
 #nav {
   position: relative;
   height: 60px;
@@ -212,6 +259,23 @@ button:active {
   padding-top: 16px;
 }
 
+#tutorial h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 45px;
+  text-align: center;
+  color: #FFF;
+  padding-top: 16px;
+  margin-bottom: -20px;
+}
+
+#tutorial h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 14px;
+  text-align: center;
+  color: #FFF;
+  padding-top: 16px;
+}
+
 #option {
   color: black;
   padding: 10px;
@@ -279,6 +343,9 @@ a {
   width: 25px;
   height: 25px;
   float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   border: 1px solid black;
   margin-right: 3px;
 }
@@ -292,17 +359,20 @@ a {
 }
 
 .available {
-  background-color: #1F6AC1;
+  background-color: #FFFFFF;
+  border: 3px solid #5998D6;
 }
 
+
 .unavailable {
-  background-color: #9FA3A2;
+  background-color: #F1F1F1;
+  border: 1px solid #D0D0D0;
 }
 
 .selected {
   background-color: #69DB69;
+  border:3px solid #55CC55;
 }
-
 #cancel-reserve{
   float: left;
 }
