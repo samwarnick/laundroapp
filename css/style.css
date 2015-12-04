@@ -557,3 +557,21 @@ a {
 #cur-points {
   color: rgba(255,171,64,1);
 }
+
+#left {
+  position: absolute;
+  left: 145px;
+  top: 600px;
+}
+
+#right {
+  position: absolute;
+  left: 375px;
+  top: 600px;
+}
+
+.tut-nav {
+  z-index: 9001;
+  width: 200px;
+  color: #fff;
+}
