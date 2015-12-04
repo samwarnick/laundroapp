@@ -10,7 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   </head>
   <body>
     <div class="" id="content">
@@ -18,7 +20,7 @@
       <div class="" id="container">
         <div id="navbar"></div>
         <div id="machine-map">
-          <h2>Available Now</h2>
+          <h2 id="available-now">Available Now</h2>
           <!-- <div id="legend">
             <div class="machine washer"></div>
             <h3>Washer</h3>
@@ -85,7 +87,7 @@
             <div class="machine space"></div>
             <div class="machine washer available"></div>
           </div>
-          <h3>Washers: <span id="wash-selected">0</span> Dryers: <span id="dry-selected">0</span></h3>
+          <h3><div class="machine washer icon"></div>Washers: <span id="wash-selected">0</span><div class="machine dryer icon"></div>Dryers: <span id="dry-selected">0</span></h3>
           <h3>$<span id="cost-selected">0.00</span></h3>
           <div class="buttons">
             <button id="cancel-reserve" onclick="goBack()">Cancel</button>
