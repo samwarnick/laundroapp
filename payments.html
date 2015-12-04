@@ -11,6 +11,8 @@
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/switchery.css" />
+    <script src="js/switchery.js"></script>
   </head>
   <body>
     <div class="" id="content">
@@ -20,8 +22,8 @@
 
         <div id="option">
         Use rewards points automatically
-          <span id="alignright"> 
-            <input type="checkbox">
+          <span id="alignright">
+            <input type="checkbox" class="js-switch" checked />
           </span>
         </div>
         <hr>
@@ -62,7 +64,7 @@
 
         <div id="option">
         Use rewards points automatically
-          <span id="alignright"> 
+          <span id="alignright">
             <input type="checkbox">
           </span>
         </div>
@@ -80,5 +82,9 @@
         <hr>
       </div>
     </div>
+    <script>
+      var elem = document.querySelector('.js-switch');
+      var init = new Switchery(elem, { color: '#FFAB40'});
+    </script>
   </body>
 </html>

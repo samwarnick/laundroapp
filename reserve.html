@@ -18,7 +18,7 @@
       <div class="" id="container">
         <div id="navbar"></div>
         <div id="machine-map">
-          <h2>Available Now</h2>
+          <h2 id="available-now">Available Now</h2>
           <!-- <div id="legend">
             <div class="machine washer"></div>
             <h3>Washer</h3>
@@ -85,11 +85,17 @@
             <div class="machine space"></div>
             <div class="machine washer available"></div>
           </div>
-          <h3>Washers: <span id="wash-selected">0</span> Dryers: <span id="dry-selected">0</span></h3>
+          <h3><div class="machine washer icon"></div>Washers: <span id="wash-selected">0</span><div class="machine dryer icon"></div>Dryers: <span id="dry-selected">0</span></h3>
           <h3>$<span id="cost-selected">0.00</span></h3>
           <div class="buttons">
             <button id="cancel-reserve" onclick="goBack()">Cancel</button>
-            <button id="reserve" onclick="location.href='landing.html';">Reserve</button>
+            <button id="reserve" onclick="reserve()">Reserve</button>
+          </div>
+          <div id="res-overlay"></div>
+          <div id="res-conf">
+            <h2>Your machines are reserved!</h2>
+            <h3>See you in the next 20 mins</h3>
+            <button id="confirm" onclick="location.href='landing.html';">Ok</button>
           </div>
         </div>
     </div>
@@ -99,6 +105,12 @@
       }
     </script>
     <script type="text/javascript">
+
+      $(document).ready(function() {
+        $("#res-overlay").hide();
+        $("#res-conf").hide();
+      });
+
       var washer = 0;
       var dryer = 0;
       var cost = 0.00;
@@ -127,6 +139,11 @@
         if (cost > 0) {
           cost -= 1.5;
         }
+      }
+
+      function reserve() {
+        $("#res-overlay").fadeIn(100);
+        $("#res-conf").fadeIn(200);
       }
 
       function update() {

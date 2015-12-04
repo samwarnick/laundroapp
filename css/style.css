@@ -97,8 +97,11 @@ body {
 }
 
 #map {
-  height: 320px;
+  height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -999;
 }
 
 #reviews-link {
@@ -107,21 +110,24 @@ body {
 }
 
 #nearby-laundromats-heading{
-	font-size: 30px;
+	font-size: 20px;
 	font-style: bold;
 	text-align: center;
 	padding: 10px;
 	border-style: none none solid none;
-	border-bottom-width: 1px;
-	border-color: #5697D8; 
+	border-bottom-width: 2px;
+	border-color: #5697D8;
+  background-color: rgba(241,241,241,.95);
 }
 
 #nearby-laundromats{
 	font-size: 20px;
 	padding: 10px;
 	border-style: none none solid none;
-	border-bottom-width: 1px;
-	border-color: #5697D8; 
+	border-bottom-width: 2px;
+	border-color: #5697D8;
+  background-color: rgba(241,241,241,.95);
+  font-weight: 300;
 }
 
 #laundryname{
@@ -130,6 +136,10 @@ body {
 
 #distance{
 	float: right;
+}
+
+#distance i {
+  color: rgba(255,171,64,.95);
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
@@ -249,14 +259,18 @@ button:active {
 #splash {
   text-align: center;
   width: 100;
+  height: 100%;
+  background-image: url(../img/laundromat.jpg);
 }
 
 #splash h1 {
   font-family: 'Poiret One', cursive;
   font-size: 45px;
   text-align: center;
-  color: #5697D8;
+  /*color: #5697D8;*/
+  color: white;
   padding-top: 16px;
+  font-weight: bold;
 }
 
 #tutorial h1 {
@@ -316,15 +330,19 @@ a {
 }
 
 #machine-map #legend h3 {
+  font-weight: 300;
   text-align: left;
   display: inline-block;
 }
 
 #machine-map h2 {
+  font-weight: 300;
   text-align: center;
+  color: #1F6AC1;
 }
 
 #machine-map h3 {
+  font-weight: 300;
   text-align: center;
 }
 
@@ -350,6 +368,16 @@ a {
   margin-right: 3px;
 }
 
+.icon {
+  float: none;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
+  position: relative;
+  border: 2px solid;
+}
+
 .washer {
   border-radius: 12.5px;
 }
@@ -363,7 +391,6 @@ a {
   border: 3px solid #5998D6;
 }
 
-
 .unavailable {
   background-color: #F1F1F1;
   border: 1px solid #D0D0D0;
@@ -373,6 +400,7 @@ a {
   background-color: #69DB69;
   border:3px solid #55CC55;
 }
+
 #cancel-reserve{
   float: left;
 }
@@ -446,4 +474,61 @@ a {
   top: 17px;
   margin: 0px;
   padding: 0px;
+}
+
+#res-conf {
+  position: absolute;
+  width: 280px;
+  height: 140px;
+  background-color: rgba(241,241,241,.9);
+  top: 180px;
+  left: 12px;
+  border-radius: 16px;
+  border: 1px solid #D0D0D0;
+}
+
+#res-conf h2 {
+  margin: 0;
+  font-weight: 400;
+}
+
+#res-conf h3 {
+  margin: 0;
+  color: #555;
+  font-weight: 300;
+}
+
+#res-conf #confirm {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  display: block;
+}
+
+#res-overlay {
+  background-color: #000;
+  opacity: .8;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#reserve-map {
+  display: block;
+  width: 100%;
+}
+
+.firstHeading {
+  font-weight: 300;
+  margin: 0;
+}
+
+#bodyContent h2 {
+  margin: 0;
+}
+
+#bodyContent h3 {
+  font-weight: 300;
+  margin: 0;
 }
