@@ -311,6 +311,7 @@ a {
   width: 14px;
   margin-right: 4px;
   position: relative;
+  border: 2px solid;
 }
 
 
@@ -451,10 +452,19 @@ a {
 
 #reserve-map {
   display: block;
-  width: 150px;
-  position: relative;
+  width: 100%;
 }
 
 .firstHeading {
   font-weight: 300;
+  margin: 0;
+}
+
+#bodyContent h2 {
+  margin: 0;
+}
+
+#bodyContent h3 {
+  font-weight: 300;
+  margin: 0;
 }
