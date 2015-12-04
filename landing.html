@@ -7,6 +7,7 @@
 	<meta name="author" content="">
 	<title>Laundroapp</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/circle.css" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -22,9 +23,18 @@
 			</div>
 
 			<div class="account-form">
-				<br><br><br><br>
-				<p class="points">450 points</p>
-				<p class="points-remaining">50 more until free wash</p>
+				<br><br>
+				<div id="points-container">
+					<h2 id="points-title">Points</h2>
+					<div class="progress_3 c100 p90 small blue" id="points-circle">
+						<span id="cur-points">450</span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+					<p class="points-remaining">50 points until free wash</p>
+				</div>
 
 				<button onclick="window.location.href='map.html'">Find a Laundromat</button>
 				<button onclick="window.location.href='machine-settings.html'">Current Load</button>
