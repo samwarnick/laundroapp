@@ -50,13 +50,39 @@ body {
 }
 
 #map {
-  height: 480px;
+  height: 320px;
   width: 100%;
 }
 
 #reviews-link {
   font-size: 12px;
   color: black;
+}
+
+#nearby-laundromats-heading{
+	font-size: 30px;
+	font-style: bold;
+	text-align: center;
+	padding: 10px;
+	border-style: none none solid none;
+	border-bottom-width: 1px;
+	border-color: #5697D8; 
+}
+
+#nearby-laundromats{
+	font-size: 20px;
+	padding: 10px;
+	border-style: none none solid none;
+	border-bottom-width: 1px;
+	border-color: #5697D8; 
+}
+
+#laundryname{
+	text-align: left;
+}
+
+#distance{
+	float: right;
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
@@ -195,6 +221,7 @@ button:active {
   padding: 10px;
   margin: 10px;
   font-size: 20px;
+	border-color: blue;
 }
 
 #expiration {
@@ -326,4 +353,47 @@ a {
 
 .points-remaining {
 
+}
+
+#washer_settings_container{
+  margin:0px;
+  padding:0px;
+  height: 185px;
+  width: 100%;
+}
+
+
+#dryer_washer_title {
+  text-align: center;
+  color: #ffad33;
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-size: 25px;
+  margin:0px;
+  padding:0px;
+  padding-top: 10px;
+}
+
+.progress_0 {
+  position: relative;
+  left: 92px;
+  top: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.progress_1 {
+  position: relative;
+  left: 25px;
+  top: 17px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.progress_2 {
+  position: relative;
+  left: 45px;
+  top: 17px;
+  margin: 0px;
+  padding: 0px;
 }
