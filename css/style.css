@@ -573,5 +573,9 @@ a {
 .tut-nav {
   z-index: 9001;
   width: 200px;
-  color: #fff;
+  color: transparent;
+}
+
+.tut-nav a {
+  color: transparent;
 }
