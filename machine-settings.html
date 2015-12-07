@@ -6,16 +6,12 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     <title>Laundroapp</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/circle.css" rel="stylesheet" type="text/css">
+     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-   
-    <script type="text/javascript">
-      $("#time_left_html").click(function(){
-        console.log("HERE");
-        $('#time_left_html').html("15 Min");
-      });
-    </script>
+    <script src="js/script.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
@@ -24,7 +20,7 @@
       <img id="iphone" src="img/iPhone-6-wireframe.jpg" alt="" />
       <div class="" id="container">
         <div class="" id="nav">
-          <h1><i class="fa fa-angle-left" id="back-icon"></i>Laundroapp<a href="settings.html"><i class="fa fa-cog" id="settings-icon"></i></a><h1>
+          <h1><i class="fa fa-angle-left" id="back-icon" onclick="goBack()"></i>Laundroapp<a href="settings.html"><i class="fa fa-cog" id="settings-icon"></i></a><h1>
         </div>
         <div id = "washer_settings_container">
           <h2 id = "dryer_washer_title"> Washer </h2>
@@ -57,9 +53,65 @@
               <div class="fill"></div>
             </div>
           </div>
-          <button class = "dryer_setting_button">+5 Min</button>
-          <button class = "dryer_setting_button">Cancel Heat</button>
+          <button id = "plus5_Button" class = "dryer_setting_button">+5 Min</button>
+          <button id = "cancel_Heat" class = "dryer_setting_button">Cancel Heat</button>
 
     </div>
   </body>
+      
+        <script type = "text/javascript">
+        var cancelHeatClickCount = 0;
+
+          $("#cancel_Heat").click(function(){
+            cancelHeatClickCount++;
+            if (cancelHeatClickCount % 2 == 1)
+            {
+              $("#cancel_Heat").addClass("heat_off");
+              $("#cancel_Heat").html("Start Heat");
+            }
+            else
+            {
+             $("#cancel_Heat").removeClass("heat_off");
+            $("#cancel_Heat").html("Cancel Heat");
+            }
+          });
+        </script>
+        <script type = "text/javascript">
+        var timeLeft = 10;
+        $("#plus5_Button").click(function() {
+          if (timeLeft < 40)
+            timeLeft += 5;
+          $("#time_left_html").html(timeLeft + " Min");
+          if (timeLeft == 15)
+          {
+            $(".time_left").removeClass("p60");
+            $(".time_left").addClass("p50");
+          }
+          if (timeLeft == 20)
+          {
+            $(".time_left").removeClass("p50");
+            $(".time_left").addClass("p40");
+          }
+           if (timeLeft == 25)
+          {
+            $(".time_left").removeClass("p40");
+            $(".time_left").addClass("p30");
+          }
+           if (timeLeft == 30)
+          {
+            $(".time_left").removeClass("p30");
+            $(".time_left").addClass("p20");
+          }
+           if (timeLeft == 35)
+          {
+            $(".time_left").removeClass("p20");
+            $(".time_left").addClass("p10");
+          }  
+           if (timeLeft == 40)
+          {
+            $(".time_left").removeClass("p10");
+            $(".time_left").addClass("p1");
+          }                    
+        });
+    </script>
 </html>

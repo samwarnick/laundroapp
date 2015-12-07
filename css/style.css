@@ -50,13 +50,39 @@ body {
 }
 
 #map {
-  height: 480px;
+  height: 320px;
   width: 100%;
 }
 
 #reviews-link {
   font-size: 12px;
   color: black;
+}
+
+#nearby-laundromats-heading{
+	font-size: 30px;
+	font-style: bold;
+	text-align: center;
+	padding: 10px;
+	border-style: none none solid none;
+	border-bottom-width: 1px;
+	border-color: #5697D8; 
+}
+
+#nearby-laundromats{
+	font-size: 20px;
+	padding: 10px;
+	border-style: none none solid none;
+	border-bottom-width: 1px;
+	border-color: #5697D8; 
+}
+
+#laundryname{
+	text-align: left;
+}
+
+#distance{
+	float: right;
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
@@ -176,14 +202,18 @@ button:active {
 #splash {
   text-align: center;
   width: 100;
+  height: 100%;
+  background-image: url(../img/laundromat.jpg);
 }
 
 #splash h1 {
   font-family: 'Poiret One', cursive;
   font-size: 45px;
   text-align: center;
-  color: #5697D8;
+  /*color: #5697D8;*/
+  color: white;
   padding-top: 16px;
+  font-weight: bold;
 }
 
 #option {
@@ -191,6 +221,7 @@ button:active {
   padding: 10px;
   margin: 10px;
   font-size: 20px;
+	border-color: blue;
 }
 
 #expiration {
@@ -231,6 +262,7 @@ a {
 
 #machine-map h2 {
   text-align: center;
+  color: #1F6AC1;
 }
 
 #machine-map h3 {
@@ -252,9 +284,22 @@ a {
   width: 25px;
   height: 25px;
   float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   border: 1px solid black;
   margin-right: 3px;
 }
+
+.icon {
+  float: none;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-right: 4px;
+  position: relative;
+}
+
 
 .washer {
   border-radius: 12.5px;
@@ -265,15 +310,17 @@ a {
 }
 
 .available {
-  background-color: #1F6AC1;
+  background-color: #FFFFFF;
+  border: 3px solid #5998D6;
 }
-
 .unavailable {
-  background-color: #9FA3A2;
+  background-color: #F1F1F1;
+  border: 1px solid #D0D0D0;
 }
-
 .selected {
   background-color: #69DB69;
+  border-color: #55CC55;
+  border-width: 3px;
 }
 
 #cancel-reserve{
@@ -351,7 +398,7 @@ a {
 
 .progress_2 {
   position: relative;
-  left: 45px;
+  left: 55px;
   top: 17px;
   margin: 0px;
   padding: 0px;
@@ -362,7 +409,7 @@ a {
   position: relative;
   left: 117px;
   top: 40px;
-  color: #5697D8;;
+  color: #5697D8;
 }
 
 .dryer_setting_button{
@@ -370,6 +417,10 @@ a {
   margin-top: 30px;
   margin-left: 19px;
   font-size: 14px;
+}
+
+.heat_off{
+  background-color: #ff6666;
 }
 
 
