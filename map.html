@@ -19,11 +19,11 @@
           <h1><i class="fa fa-angle-left" id="back-icon" onclick="goBack()"></i>Laundroapp<a href="settings.html"><i class="fa fa-cog" id="settings-icon"></i></a><h1>
         </div>
 				<div id="nearby-laundromats-heading">Nearby</div>
-				<div id="nearby-laundromats">
-					<span id="laundryname">The Wash Hut</span><span id="distance">0.6 mi ></span>
+				<div id="nearby-laundromats" onclick="gotoPlace(0)">
+					<span id="laundryname">The Wash Hut</span><span id="distance">0.6 mi <i class="fa fa-chevron-right"></i></span>
 				</div>
-				<div id="nearby-laundromats">
-					<span id="laundryname">Laundry on Ninth</span><span id="distance">0.9 mi ></span>
+				<div id="nearby-laundromats" onclick="gotoPlace(1)">
+					<span id="laundryname">Laundry on Ninth</span><span id="distance">0.9 mi <i class="fa fa-chevron-right"></i></span>
 				</div>
         <div id="map"></div>
       </div>
@@ -35,10 +35,15 @@
     </script>
     <script type="text/javascript">
       var laundromats = [
-        {id: 1, name: 'Laundry on Ninth', pos: {lat: 40.239545, lng: -111.642502}, rating: 3.7},
-        {id: 2, name: 'Wash Hut', pos: {lat: 40.241904, lng: -111.650208}, rating: 2.7}
+        {id: 2, name: 'Wash Hut', pos: {lat: 40.241904, lng: -111.650208}, rating: 2.7},
+        {id: 1, name: 'Laundry on Ninth', pos: {lat: 40.239545, lng: -111.642502}, rating: 3.7}
       ];
       var map;
+
+      function gotoPlace(index) {
+        var laundromat = laundromats[index];
+        map.panTo({lat: laundromat.pos.lat+.007, lng: laundromat.pos.lng});
+      }
 
       function bindInfoWindow(marker, map, infowindow, html) {
           google.maps.event.addListener(marker, 'click', function() {
@@ -68,6 +73,7 @@
           var content = generateContent(laundromat);
           var infowindow = new google.maps.InfoWindow({
             content: content,
+            disableAutoPan : true
             // maxWidth: 200
           });
 
@@ -89,7 +95,7 @@
         for (var i =0; i < left; i++) {
           content += '<i class="fa fa-star-o"></i>';
         }
-        content += ' ' + laundromat.rating + '  <a id="reviews-link" href="'+ laundromat.id + '.html">read reviews</a></h2><button onclick="location.href=\'reserve.html\';">Reserve</button></div>';
+        content += ' ' + laundromat.rating + '  <a id="reviews-link" href="'+ laundromat.id + '.html">read reviews</a></h2><h3>9 washers available</h3><h3>11 dryers available</h3></div><button id="reserve-map" onclick="location.href=\'reserve.html\';">Reserve</button>';
         return content;
       };
 

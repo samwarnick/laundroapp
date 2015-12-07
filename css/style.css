@@ -22,6 +22,53 @@ body {
   top: 136px;
 }
 
+#tutorial-container {
+  z-index: 1000;
+  float: left;
+  position: absolute;
+  width: 302px;
+  height: 540px;
+  left: 122px;
+  top: 136px;
+  background-color: #5396DA;
+  text-align: center;
+}
+
+#tutorial-footer {
+  position: absolute;
+  width: 272px;
+  left: 0px;
+  top: 490px;
+  border-top: 1px solid #fff;
+  padding: 15px;
+  color: #fff;
+  text-align: left;
+}
+
+#tutorial button {
+  background-color: #fff;
+  color: #5095DD;
+}
+
+#info {
+  width: 80%;
+  position: relative;
+  margin: 0px auto;
+  color: #fff;
+  font-size: 20px;
+}
+
+#dots {
+  float: right;
+  padding-top: 5px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.tutorial-img {
+  box-shadow: 0px 0px 20px #285786;
+}
+
 #nav {
   position: relative;
   height: 60px;
@@ -50,8 +97,11 @@ body {
 }
 
 #map {
-  height: 320px;
+  height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -999;
 }
 
 #reviews-link {
@@ -60,21 +110,24 @@ body {
 }
 
 #nearby-laundromats-heading{
-	font-size: 30px;
+	font-size: 20px;
 	font-style: bold;
 	text-align: center;
 	padding: 10px;
 	border-style: none none solid none;
-	border-bottom-width: 1px;
-	border-color: #5697D8; 
+	border-bottom-width: 2px;
+	border-color: #5697D8;
+  background-color: rgba(241,241,241,.95);
 }
 
 #nearby-laundromats{
 	font-size: 20px;
 	padding: 10px;
 	border-style: none none solid none;
-	border-bottom-width: 1px;
-	border-color: #5697D8; 
+	border-bottom-width: 2px;
+	border-color: #5697D8;
+  background-color: rgba(241,241,241,.95);
+  font-weight: 300;
 }
 
 #laundryname{
@@ -83,6 +136,10 @@ body {
 
 #distance{
 	float: right;
+}
+
+#distance i {
+  color: rgba(255,171,64,.95);
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
@@ -216,6 +273,23 @@ button:active {
   font-weight: bold;
 }
 
+#tutorial h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 45px;
+  text-align: center;
+  color: #FFF;
+  padding-top: 16px;
+  margin-bottom: -20px;
+}
+
+#tutorial h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 14px;
+  text-align: center;
+  color: #FFF;
+  padding-top: 16px;
+}
+
 #option {
   color: black;
   padding: 10px;
@@ -256,16 +330,19 @@ a {
 }
 
 #machine-map #legend h3 {
+  font-weight: 300;
   text-align: left;
   display: inline-block;
 }
 
 #machine-map h2 {
+  font-weight: 300;
   text-align: center;
   color: #1F6AC1;
 }
 
 #machine-map h3 {
+  font-weight: 300;
   text-align: center;
 }
 
@@ -298,8 +375,8 @@ a {
   width: 14px;
   margin-right: 4px;
   position: relative;
+  border: 2px solid;
 }
-
 
 .washer {
   border-radius: 12.5px;
@@ -313,14 +390,15 @@ a {
   background-color: #FFFFFF;
   border: 3px solid #5998D6;
 }
+
 .unavailable {
   background-color: #F1F1F1;
   border: 1px solid #D0D0D0;
 }
+
 .selected {
   background-color: #69DB69;
-  border-color: #55CC55;
-  border-width: 3px;
+  border:3px solid #55CC55;
 }
 
 #cancel-reserve{
@@ -352,7 +430,8 @@ a {
 }
 
 .points-remaining {
-
+  padding-top: 20px;
+  clear: both;
 }
 
 #washer_settings_container{
@@ -423,37 +502,105 @@ a {
   background-color: #ff6666;
 }
 
+.progress_3 {
+  position: relative;
+  left: 84px;
+  top: 10px;
+  margin: 0px;
+  padding: 0px;
+}
 
+#res-conf {
+  position: absolute;
+  width: 280px;
+  height: 140px;
+  background-color: rgba(241,241,241,.9);
+  top: 180px;
+  left: 12px;
+  border-radius: 16px;
+  border: 1px solid #D0D0D0;
+}
 
+#res-conf h2 {
+  margin: 0;
+  font-weight: 400;
+}
 
+#res-conf h3 {
+  margin: 0;
+  color: #555;
+  font-weight: 300;
+}
 
+#res-conf #confirm {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  display: block;
+}
 
+#res-overlay {
+  background-color: #000;
+  opacity: .8;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
 
+#reserve-map {
+  display: block;
+  width: 100%;
+}
 
+.firstHeading {
+  font-weight: 300;
+  margin: 0;
+}
 
+#bodyContent h2 {
+  margin: 0;
+}
 
+#bodyContent h3 {
+  font-weight: 300;
+  margin: 0;
+}
 
+#points-title {
+  color: rgba(255,171,64,1);
+  margin: 0;
+  font-size: 30px;
+}
 
+#points-container {
+  margin:0px;
+  padding:0px;
+  width: 100%;
+}
 
+#cur-points {
+  color: rgba(255,171,64,1);
+}
 
+#left {
+  position: absolute;
+  left: 145px;
+  top: 600px;
+}
 
+#right {
+  position: absolute;
+  left: 375px;
+  top: 600px;
+}
 
+.tut-nav {
+  z-index: 9001;
+  width: 200px;
+  color: transparent;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.tut-nav a {
+  color: transparent;
+}

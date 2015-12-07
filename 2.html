@@ -48,16 +48,16 @@
 
         content += "<h4>" + review.author + " on " + review.date;
 
-        for (var i =0; i < Math.floor(review.rating); i++) {
-          content += '<i class="fa fa-star"></i>';
-        }
         var left = 5 - Math.floor(review.rating);
+        for (var i =0; i < left; i++) {
+          content += '<i class="fa fa-star-o"></i>';
+        }
         if (review.rating > Math.floor(review.rating)) {
           content += '<i class="fa fa-star-half-o"></i>'
           left -= 1;
         }
-        for (var i =0; i < left; i++) {
-          content += '<i class="fa fa-star-o"></i>';
+        for (var i =0; i < Math.floor(review.rating); i++) {
+          content += '<i class="fa fa-star"></i>';
         }
 
         content += "</h4>";
